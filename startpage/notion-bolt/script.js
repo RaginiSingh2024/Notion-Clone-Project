@@ -13,11 +13,31 @@ let settings = {
     pushNotifications: true
 };
 let pendingInvites = [];
+// Global sticky note content shared across pages
+let globalSticky = localStorage.getItem('globalSticky') || '';
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
     loadData();
     initializeEventListeners();
+    // Sticky note toggle setup
+    const stickyNote = document.getElementById('stickyNote');
+    const stickyToggle = document.getElementById('stickyToggle');
+    stickyNote.classList.add('hidden');
+    let noteOpen = false;
+    stickyToggle.addEventListener('click', () => {
+        noteOpen = !noteOpen;
+        stickyNote.classList.toggle('hidden', !noteOpen);
+        stickyToggle.classList.toggle('open', noteOpen);
+    });
+
+    // Sticky input sync
+    const stickyInput = document.getElementById('stickyInput');
+    stickyInput.value = globalSticky;
+    stickyInput.addEventListener('input', function(){
+        globalSticky = this.value;
+        localStorage.setItem('globalSticky', globalSticky);
+    });
     
     // Create default page if none exist
     if (pages.length === 0) {
@@ -48,6 +68,7 @@ function initializeEventListeners() {
     // Auto-resize textarea
     const contentInput = document.getElementById('pageContentInput');
     contentInput.addEventListener('input', function() {
+        // sync sticky handled separately below
         this.style.height = 'auto';
         this.style.height = this.scrollHeight + 'px';
     });
@@ -61,7 +82,8 @@ function createPage(title = 'Untitled', content = '') {
         content: content,
         createdAt: new Date(),
         updatedAt: new Date(),
-        isFavorite: false
+        isFavorite: false,
+        sticky: ''
     };
     
     pages.push(page);
@@ -290,6 +312,7 @@ function updateUI() {
                 lastEdited.textContent = formatLastEdited(currentPage.updatedAt);
                 
                 // Update inputs
+                
                 document.getElementById('pageTitleInput').value = currentPage.title || '';
                 document.getElementById('pageContentInput').value = currentPage.content || '';
                 

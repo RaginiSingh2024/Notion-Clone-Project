@@ -1712,6 +1712,56 @@ body.font-large {
     background: rgba(35, 131, 226, 0.2);
 }
 
+/* Sticky Note */
+
+/* Toggle Button */
+.sticky-toggle{
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #2383E2;
+  color:#fff;
+  border:none;
+  font-size:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+  z-index:2100;
+}
+.sticky-toggle.open{background:#d9534f;}
+.sticky-note{
+  transition: opacity .25s ease, transform .25s ease;
+
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 250px;
+  height: 180px;
+  background: #fffbe6;
+  border: 1px solid #e0d9b8;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  z-index: 2000;
+}
+.sticky-note.hidden{opacity:0;pointer-events:none;transform:scale(0.8);} 
+.sticky-note textarea{
+  flex:1;
+  resize:none;
+  border:none;
+  background: transparent;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 14px;
+  outline:none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {

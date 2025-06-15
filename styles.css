@@ -392,6 +392,16 @@
 }
 
 /* Show dropdown on hover with smooth transition */
+
+/* JS-controlled dropdown support across all pages */
+.dropdown-megamenu { display: none; }
+.dropdown-megamenu.show {
+  display: flex;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+.arrow.up { transform: rotate(180deg); }
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;

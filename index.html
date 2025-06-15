@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
+  <style>
+    .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    .arrow.up {
+      transform: rotate(180deg);
+    }
+    .dropdown-megamenu {
+      display: none;
+    }
+    .dropdown-megamenu.show {
+      display: flex;
+    }
+  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notion Replica</title>
@@ -9,7 +24,9 @@
 <body>
   <header class="header"> 
     <div class="container header-content">
-      <div class="logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion Logo" class="logo-img"> </div>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion Logo" class="logo-img">
+    </div>
       <nav class="nav">
         <div class="nav-item dropdown">
           <a href="#" class="nav-link">Notion <span class="arrow">▼</span></a>
@@ -36,7 +53,7 @@
             <div class="dropdown-col dropdown-promo">
               <div class="promo-title">Try the Notion desktop app for a faster experience</div>
               <a href="#" class="promo-btn">Download app</a>
-              <img src="https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/product/homepage-bento-1.png" alt="Notion illustration" class="promo-img">
+              <img src="assets/images/notion-illustration.png" alt="Notion illustration" class="promo-img">
             </div>
           </div>
         </div>
@@ -255,6 +272,7 @@
 
   <!-- Shared footer placeholder -->
   <div id="shared-footer"></div>
+</script>
   <script src="script.js"></script>
   <script>
     // Inject shared footer.html at runtime
@@ -264,5 +282,39 @@
         document.getElementById('shared-footer').innerHTML = html;
       });
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.nav-item.dropdown').forEach(item => {
+        const link = item.querySelector('.nav-link');
+        const menu = item.querySelector('.dropdown-megamenu');
+        const arrow = item.querySelector('.arrow');
+
+        link.addEventListener('click', e => {
+          e.preventDefault();
+
+          // Check if already open
+          const isAlreadyOpen = menu.classList.contains('show');
+
+          // Close all dropdowns
+          document.querySelectorAll('.nav-item.dropdown .dropdown-megamenu').forEach(m => m.classList.remove('show'));
+          document.querySelectorAll('.nav-item.dropdown .arrow').forEach(a => a.classList.remove('up'));
+
+          // If it was not open, open it
+          if (!isAlreadyOpen) {
+            menu.classList.add('show');
+            arrow.classList.add('up');
+          }
+        });
+      });
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', e => {
+        if (!e.target.closest('.nav-item.dropdown')) {
+          document.querySelectorAll('.nav-item.dropdown .dropdown-megamenu').forEach(m => m.classList.remove('show'));
+          document.querySelectorAll('.nav-item.dropdown .arrow').forEach(a => a.classList.remove('up'));
+        }
+      });
+    });
+  </script>
 </body>
-</html> 
+</html>
