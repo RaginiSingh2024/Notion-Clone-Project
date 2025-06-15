@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header"> 
+    <div class="container header-content">
+      <a href="index.html"> <div class="logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion Logo" class="logo-img"> </div></a>
+      <nav class="nav">
+      <nav class="nav">
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link">Notion <span class="arrow">▼</span></a>
+          <div class="dropdown-megamenu dropdown-notion">
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Features</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Notion AI</span><br><span class="dropdown-link-desc">Build, write, automate</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Docs</span><br><span class="dropdown-link-desc">Simple &amp; powerful</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Wikis</span><br><span class="dropdown-link-desc">Centralize your knowledge</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Projects</span><br><span class="dropdown-link-desc">Manage any project</span></a>
+            </div>
+            <div class="dropdown-col">
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Enterprise Search <span class="nav-badge">New</span></span><br><span class="dropdown-link-desc">Find answers instantly</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">AI Meeting Notes <span class="nav-badge">New</span></span><br><span class="dropdown-link-desc">Perfectly written by AI</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Forms</span><br><span class="dropdown-link-desc">Responses and requests</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Sites</span><br><span class="dropdown-link-desc">Publish anything, fast</span></a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Get started</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Browse marketplace</span><br><span class="dropdown-link-desc">Templates for everything</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">View integrations</span><br><span class="dropdown-link-desc">Connect your apps with Notion</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Download web clipper</span><br><span class="dropdown-link-desc">Save from the web into Notion</span></a>
+            </div>
+            <div class="dropdown-col dropdown-promo">
+              <div class="promo-title">Try the Notion desktop app for a faster experience</div>
+              <a href="#" class="promo-btn">Download app</a>
+              <img src="https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/product/homepage-bento-1.png" alt="Notion illustration" class="promo-img">
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="mail.html" class="nav-link">Mail <span class="nav-badge">New</span></a>
+        </div>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+        <a href="ai.html" class="nav-link">AI</a>
+        <a href="enterprise.html" class="nav-link">Enterprise</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link">Explore <span class="arrow">▼</span></a>
+          <div class="dropdown-megamenu dropdown-explore">
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Teams</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Eng &amp; Product</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Design</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Marketing</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">IT</span></a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Team size</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Startups</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">SMBs</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Enterprise</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Education</span></a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Learn</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Help center</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Customer stories</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Blog</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Community</span></a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Build</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">API</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Templates</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Security</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Consultants</span></a>
+            </div>
+          </div>
+        </div>
+        <a href="request-demo.html" class="nav-link">Request a demo</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="login-btn">Log in</a>
+        <a href="login.html" class="cta-btn" style="background-color: black;">Get Notion free</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content" style="flex-direction:column; align-items:center; justify-content:center; position:relative;">
+          <!-- Decorative curved dashed path -->
+          <svg class="hero-path" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 200 C300 120 600 80 1200 0" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="4" stroke-dasharray="6 10" stroke-linecap="round" />
+          </svg>
+        <div class="hero-text" style="text-align:center; margin-left:0; max-width:520px;">
+          <img src="assets/images/mailicon.png" alt="Mail Icon" style="width:72px; height:72px; margin-bottom:24px;">
+          <h1 id="hero-title" data-i18n="hero_title" style="font-size:64px; font-weight:800; line-height:1.15; letter-spacing:-0.01em; margin:0;">The inbox that thinks like you</h1>
+          <p id="hero-subtitle" data-i18n="hero_subtitle" style="font-size:20px; max-width:520px; margin:24px auto 32px; color:rgba(55,53,47,.7); text-align:center;">Meet Notion Mail, the inbox that organizes itself, drafts emails, and schedules meetings any way you'd like.</p>
+          <a id="hero-cta" href="#" class="cta-btn cta-dark" data-i18n="cta_button">Get Notion Mail free</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inbox preview image -->
+    <section class="inbox-preview">
+      <div class="container" style="display:flex; justify-content:center;">
+        <img src="assets/images/doruimg.png" alt="Notion Mail Inbox Preview" class="inbox-img" style="width:120%">
+      </div>
+    </section>
+
+    <!-- Reviews slider -->
+    <section class="reviews-section">
+      <div class="reviews-container">
+        <div class="review-card">
+          <h4>Camille Ricketts <span>@camillericketts</span></h4>
+          <p>Notion Mail let me create a system so customized to the way I work, my relationships, and my tone of voice that there’s no way I could go back.</p>
+        </div>
+        <div class="review-card">
+          <h4>Aleks <span>@aleksliving</span></h4>
+          <p>OK: Notion Mail is pretty incredible innovation to something as mundane as email.</p>
+        </div>
+        <div class="review-card">
+          <h4>Muhammad Tayyab <span>@tayyabgoose</span></h4>
+          <p>I’ve been loving using @NotionMail, especially for its AI auto label feature. Takes the effort out of organizing your inbox.</p>
+        </div>
+        <div class="review-card">
+          <h4>Kamil Ruczynski <span>@unable0_</span></h4>
+          <p>Feels magical. I finally got rid of email anxiety. I might even love @NotionMail more than Notion itself.</p>
+        </div>
+        <div class="review-card">
+          <h4>Jane Doe <span>@janedoe</span></h4>
+          <p>Draft emails in seconds and keep everything tidy—Notion Mail is a game changer for my workflow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature banner -->
+    <section class="feature-banner">
+      <div class="container feature-wrapper">
+        <h2 class="feature-title" style="
+        text-align: center;
+        font-size: 50px;
+        margin-right: 450px;
+    ">Every email organized,<br> automatically.</h2>
+        <img src="assets/images/stamps.png" alt="Stamps" class="feature-decor" style="
+     margin-left: 80px;
+     width: 90%;
+    ">
+      </div>
+    </section>
+  </main>
+
+  
+      <!-- Smart AI Email Sorting Section -->
+      <section class="smart-sorting" style="padding: 60px 0; background: #ffffff;">
+        <div class="container" style="text-align: center; margin-bottom: 40px;">
+          <p style="font-size: 22px; color: #111; font-weight: 500; max-width: 800px; margin: 0 auto;">
+            Tell Notion AI what types of emails are important to read, and it’ll automatically label and sort them as they arrive.
+          </p>
+        </div>
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+          <div style="flex: 1 1 400px; max-width: 500px;">
+            <img src="assets/images/smart-inbox.png" alt="Custom Inbox Views" style="width: 100%; border-radius: 12px;">
+            <p style="font-size: 18px; margin-top: 16px; text-align: center;">Split your inbox into custom views that match your focus areas.</p>
+          </div>
+          <div style="flex: 1 1 400px; max-width: 500px;">
+            <img src="assets/images/email-filtering.png" alt="Filter Emails" style="width: 100%; border-radius: 12px;">
+            <p style="font-size: 18px; margin-top: 16px; text-align: center;">Group and filter emails by topic, sender, label—whatever you need.</p>
+          </div>
+        </div>
+      </section>
+      <!-- AI Reply Drafting Section -->
+      <section class="ai-reply-section" style="padding: 80px 0; background: #ffffff;">
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 60px;">
+          <!-- Left Side Textual Content -->
+          <div style="flex: 1 1 400px; max-width: 500px;">
+            <img src="assets/images/AIbadge.png" alt="AI Badge" style="width: 70px; margin-bottom: 20px;">
+            <h2 style="font-size: 44px; font-weight: 800; line-height: 1.2; margin-bottom: 30px;">
+              Every reply<br>drafted, quickly.
+            </h2>
+            <ul style="list-style: none; padding: 0; margin: 0 0 20px 0;">
+              <li style="font-size: 18px; margin-bottom: 16px;">{} Snippets</li>
+              <li style="font-size: 18px; margin-bottom: 16px;">📅 Built-in scheduling</li>
+              <li style="font-size: 18px; margin-bottom: 16px;">↩ Quick replies</li>
+            </ul>
+            <p style="font-size: 18px; margin-top: 16px;">
+              <span style="color: red; font-weight: bold;">AI</span> Improve your writing with AI<br>
+              <span style="font-size: 14px; color: #666;">Write, edit, and perfect emails with AI.</span>
+            </p>
+          </div>
+          <!-- Right Side Placeholder for Image -->
+          <div style="flex: 1 1 400px; max-width: 600px;">
+            <img src="assets/images/AI.png" alt="AI Reply Draft Example" style="width: 90%; border-radius: 16px;">
+          </div>
+        </div>
+      </section>
+      <!-- Gmail Connect CTA Section -->
+<section class="connect-gmail-section" style="padding: 80px 0; background: #ffffff; border-top: 1px solid #eee;">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 40px;">
+      
+      <!-- Text and Button -->
+      <div style="flex: 1 1 400px; max-width: 600px;">
+        <h2 style="font-size: 32px; font-weight: 700; line-height: 1.4; margin-bottom: 20px;">
+          Made for startup speed. Connect Gmail and see for yourself.
+        </h2>
+       <a href="login.html">
+        <button style="padding: 12px 24px; font-size: 16px; background-color: #1a1a1a; color: white; border: none; border-radius: 8px; cursor: pointer;">
+            Get started for free
+          </button>
+       </a>
+      </div>
+  
+      <!-- Placeholder for the image line (Notion, electricity icon, paper plane) -->
+      <div style="flex: 1 1 300px; text-align: right;">
+        <img src="assets/images/mail-sendnotion.png" alt="Connect Gmail Flow" style="max-width: 100%; height: auto;">
+      </div>
+  
+    </div>
+  </section>
+  <!-- Notion Editor Feel Section -->
+<section class="notion-editor-section" style="padding: 80px 0; background: #ffffff;">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 60px;">
+  
+      <!-- Left Text Content -->
+      <div style="flex: 1 1 400px; max-width: 500px;">
+        <img src="assets/images/notion-stamp.png" alt="Notion Stamp Icon" style="width: 180px; margin-bottom: 30px;">
+        <h2 style="font-size: 50px; font-weight: 800; line-height: 1.2; margin-bottom: 20px;">
+          It feels just<br>like Notion.
+        </h2>
+        <p style="font-size: 18px; color: #333;">Quickly compose beautiful emails with the Notion editor.</p>
+      </div>
+  
+      <!-- Right Image Placeholder -->
+      <div style="flex: 1 1 400px; max-width: 600px;">
+        <img src="assets/images/notion-email.png" alt="Notion Email Example" style="width: 90%; border-radius: 16px;">
+      </div>
+  
+    </div>
+  </section>
+  <!-- Availability Section -->
+<section class="availability-section" style="padding: 80px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      
+      <!-- Heading -->
+      <h2 style="font-size: 70px; font-weight: 800; margin-bottom: 60px;">
+        Available anywhere, even offline.
+      </h2>
+  
+      <!-- App Options -->
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+  
+        <!-- iOS App -->
+        <div style="flex: 1 1 400px; max-width: 480px; text-align: center;">
+          <img src="assets/images/ios.png" alt="iOS App Email Preview" style="width: 100%; border-radius: 20px; margin-bottom: 20px;">
+          <p style="font-size: 18px; font-weight: 500;">Email on the go with the iOS app.</p>
+          <span style="display: inline-block; padding: 8px 16px; background: #f1eeeb; color: #888; border-radius: 999px; font-size: 14px; margin-top: 8px;">
+            Coming soon
+          </span>
+        </div>
+  
+        <!-- macOS App -->
+        <div style="flex: 1 1 400px; max-width: 480px; text-align: center;">
+          <img src="assets/images/andriod.png" alt="Mac App Email Preview" style="width: 100%; border-radius: 20px; margin-bottom: 20px;">
+          <p style="font-size: 18px; font-weight: 500;">Email without distractions. Get the Mac App.</p>
+          <button style="padding: 12px 24px; background-color: #1a1a1a; color: white; border: none; border-radius: 8px; font-size: 15px; cursor: pointer; margin-top: 8px;">
+            Download for macOS →
+          </button>
+        </div>
+  
+      </div>
+    </div>
+    <!-- Data Security Section -->
+<section class="data-security-section" style="padding: 80px 0; background: #ffffff;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto; text-align: center;">
+      
+      <!-- Heading -->
+      <h2 style="font-size: 60px; font-weight: 800; margin-bottom: 60px;">
+        Built with data security in mind.
+      </h2>
+  
+      <!-- Features Row -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px;">
+        <!-- Feature 1 -->
+        <div style="flex: 1 1 250px; max-width: 300px; display: flex; align-items: center; gap: 16px;">
+          <img src="assets/images/stamp1.png" alt="GDPR compliant" style="width: 60px;">
+          <p style="font-size: 18px; text-align: left;">GDPR & CCPA<br>compliant.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div style="flex: 1 1 250px; max-width: 300px; display: flex; align-items: center; gap: 16px;">
+          <img src="assets/images/stamp2.png" alt="No data training" style="width: 60px;">
+          <p style="font-size: 18px; text-align: left;">No training on your<br>data.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div style="flex: 1 1 250px; max-width: 300px; display: flex; align-items: center; gap: 16px;">
+          <img src="assets/images/stamp3.png" alt="HIPAA certified" style="width: 60px;">
+          <p style="font-size: 18px; text-align: left;">HIPAA and SOC 2 (Type 1)<br>certified.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
+      <!-- Q&A Section -->
+      <section class="qa-section" style="padding: 80px 0; background: #ffffff;">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+          <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px;" data-i18n="qa_heading">Questions & answers</h2>
+          <div class="qa-list" style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="border-top: 1px solid #eee; padding: 20px 0; font-size: 18px; font-weight: 600; display: flex; justify-content: space-between;">
+              <span>Which email provider(s) are Notion Mail compatible with?</span><span>+</span>
+            </div>
+            <div style="border-top: 1px solid #eee; padding: 20px 0; font-size: 18px; font-weight: 600; display: flex; justify-content: space-between;">
+              <span>When will Notion Mail be available on mobile devices?</span><span>+</span>
+            </div>
+            <div style="border-top: 1px solid #eee; padding: 20px 0; font-size: 18px; font-weight: 600; display: flex; justify-content: space-between;">
+              <span>What languages are Notion Mail available in?</span><span>+</span>
+            </div>
+            <div style="border-top: 1px solid #eee; padding: 20px 0; font-size: 18px; font-weight: 600; display: flex; justify-content: space-between;">
+              <span>Can I manage multiple emails accounts on Notion Mail?</span><span>+</span>
+            </div>
+            <div style="border-top: 1px solid #eee; padding: 20px 0; font-size: 18px; font-weight: 600; display: flex; justify-content: space-between;">
+              <span>What are Notion Mail’s security standards?</span><span>+</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer" style="background: #fff; padding: 80px 40px; font-family: sans-serif;">
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+
+          <!-- Logo & Socials -->
+          <div style="flex: 1 1 250px; margin-bottom: 40px;">
+            <img src="assets/images/notion-logo.jpeg" alt="Notion Logo" style="height: 40px; margin-bottom: 24px;">
+            <div class="footer-socials" style="display: flex; gap: 12px; margin-bottom: 20px;">
+              <img src="assets/icons/icons8-insta.svg" alt="Instagram" style="width: 20px;" >
+              <img src="assets/icons/icons8-x.svg" alt="X" style="width: 20px;" >
+              <img src="assets/icons/icons8-linkedin.svg" alt="LinkedIn" style="width: 20px;" >
+              <img src="assets/icons/icons8-facebook.svg" alt="Facebook" style="width: 20px;" >
+              <img src="assets/icons/icons8-youtube.svg" alt="YouTube" style="width: 20px;" >
+            </div>
+            <div class="language-dropdown">
+              <button id="language-btn" onclick="toggleLanguageMenu()">
+                🌐 <span id="selected-lang">English (US)</span> <span style="font-size: 14px;">▼</span>
+              </button>
+              <ul id="language-menu" class="language-menu">
+                <li onclick="selectLanguage(this)" data-lang="English (US)">
+                  <strong>English (US)</strong><br><span>English (US)</span>
+                </li>
+                <li onclick="selectLanguage(this)" data-lang="Français (France)">
+                  <strong>Français (France)</strong><br><span>French (France)</span>
+                </li>
+                <li onclick="selectLanguage(this)" data-lang="Deutsch">
+                  <strong>Deutsch</strong><br><span>German</span>
+                </li>
+                <li onclick="selectLanguage(this)" data-lang="日本語">
+                  <strong>日本語</strong><br><span>Japanese</span>
+                </li>
+                <li onclick="selectLanguage(this)" data-lang="한국어">
+                  <strong>한국어</strong><br><span>Korean</span>
+                </li>
+              </ul>
+            </div>
+            <div style="color: #666; font-size: 14px;">
+              <div>Do Not Sell or Share My Info</div>
+              <div>Cookie settings</div>
+              <div style="margin-top: 12px;">© 2025 Notion Labs, Inc.</div>
+            </div>
+          </div>
+
+          <!-- Link Columns -->
+          <div style="display: flex; flex: 3 1 600px; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+
+            <div>
+              <h4 style="font-weight: 700; margin-bottom: 16px; color: #111;">Company</h4>
+              <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li>About us</li>
+                <li>Careers</li>
+                <li>Security</li>
+                <li>Status</li>
+                <li>Terms & privacy</li>
+                <li>Your privacy rights</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 style="font-weight: 700; margin-bottom: 16px;">Download</h4>
+              <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li>iOS & Android</li>
+                <li>Mac & Windows</li>
+                <li>Calendar</li>
+                <li>Web Clipper</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 style="font-weight: 700; margin-bottom: 16px;">Resources</h4>
+              <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li>Help center</li>
+                <li>Pricing</li>
+                <li>Blog</li>
+                <li>Community</li>
+                <li>Integrations</li>
+                <li>Templates</li>
+                <li>Affiliates</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 style="font-weight: 700; margin-bottom: 16px;">Notion for</h4>
+              <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li>Enterprise</li>
+                <li>Small business</li>
+                <li>Personal</li>
+                <li style="margin-top: 16px; font-weight: bold;">Explore more →</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+</body>
+<script src="translation.js"></script>
+<script>
+  function toggleLanguageMenu() {
+    const menu = document.getElementById("language-menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  function selectLanguage(element) {
+    const selected = element.getAttribute("data-lang");
+    document.getElementById("selected-lang").innerText = selected;
+    document.getElementById("language-menu").style.display = "none";
+    localStorage.setItem("notionLang", selected);
+    applyTranslations(selected);
+  }
+
+  function applyTranslations(lang) {
+    const map = translations[lang];
+    if (!map) return;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (map[key]) el.textContent = map[key];
+    });
+  }
+
+  document.addEventListener("click", function (e) {
+    const menu = document.getElementById("language-menu");
+    const btn = document.getElementById("language-btn");
+    if (!btn.contains(e.target)) {
+      menu.style.display = "none";
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const savedLang = localStorage.getItem("notionLang") || "English (US)";
+    document.getElementById("selected-lang").innerText = savedLang;
+    applyTranslations(savedLang);
+  });
+</script>
+</html>
+<script>
+
+
+
+    
+  const reviewsContainer = document.querySelector('.reviews-container');
+  let scrollInterval;
+  const speed = 1; // pixels per frame
+  function startScroll(){
+    stopScroll();
+    scrollInterval = setInterval(()=>{
+      reviewsContainer.scrollLeft += speed;
+      // loop
+      if(reviewsContainer.scrollLeft + reviewsContainer.clientWidth >= reviewsContainer.scrollWidth){
+        reviewsContainer.scrollLeft = 0;
+      }
+    }, 20); // 50fps
+  }
+  function toggleLanguageMenu() {
+  const menu = document.getElementById("language-menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+function selectLanguage(element) {
+  const selected = element.getAttribute("data-lang");
+  document.getElementById("selected-lang").innerText = selected;
+  document.getElementById("language-menu").style.display = "none";
+
+  // Optional: save language to localStorage
+  localStorage.setItem("notionLang", selected);
+}
+
+// Close dropdown if clicking outside
+document.addEventListener("click", function (e) {
+  const menu = document.getElementById("language-menu");
+  const btn = document.getElementById("language-btn");
+  if (!btn.contains(e.target)) {
+    menu.style.display = "none";
+  }
+});
+
+// Optional: load saved language on page load
+document.addEventListener("DOMContentLoaded", function () {
+  const savedLang = localStorage.getItem("notionLang");
+  if (savedLang) {
+    document.getElementById("selected-lang").innerText = savedLang;
+  }
+});
+
+</script>
+</body>
+<script src="translations.js"></script>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "notion-clone",
+  "version": "1.0.0",
+  "description": "A beautiful Notion clone built with HTML, CSS, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -s . -l 3000",
+    "start": "npx serve -s . -l 3000",
+    "build": "echo 'No build step required for static site'"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "keywords": ["notion", "clone", "html", "css", "javascript"],
+  "author": "",
+  "license": "MIT"
+}

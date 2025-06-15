@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notion – Calendar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header"> 
+    <div class="container header-content">
+      <a href="index.html"> <div class="logo"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion Logo" class="logo-img"> </div></a>
+      <nav class="nav">
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link">Notion <span class="arrow">▼</span></a>
+          <div class="dropdown-megamenu dropdown-notion">
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Features</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Notion AI</span><br><span class="dropdown-link-desc">Build, write, automate</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Docs</span><br><span class="dropdown-link-desc">Simple &amp; powerful</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Wikis</span><br><span class="dropdown-link-desc">Centralize your knowledge</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Projects</span><br><span class="dropdown-link-desc">Manage any project</span></a>
+            </di
+            <div class="dropdown-col">
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Enterprise Search <span class="nav-badge">New</span></span><br><span class="dropdown-link-desc">Find answers instantly</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">AI Meeting Notes <span class="nav-badge">New</span></span><br><span class="dropdown-link-desc">Perfectly written by AI</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Forms</span><br><span class="dropdown-link-desc">Responses and requests</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Sites</span><br><span class="dropdown-link-desc">Publish anything, fast</span></a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Get started</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Browse marketplace</span><br><span class="dropdown-link-desc">Templates for everything</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">View integrations</span><br><span class="dropdown-link-desc">Connect your apps with Notion</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Download web clipper</span><br><span class="dropdown-link-desc">Save from the web into Notion</span></a>
+            </div>
+            <div class="dropdown-col dropdown-promo">
+              <div class="promo-title">Try the Notion desktop app for a faster experience</div>
+              <a href="#" class="promo-btn">Download app</a>
+              <img src="https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/product/homepage-bento-1.png" alt="Notion illustration" class="promo-img">
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="mail.html" class="nav-link">Mail <span class="nav-badge">New</span></a>
+        </div>
+        <a href="calendar.html" class="nav-link">Calendar</a>
+        <a href="ai.html" class="nav-link">AI</a>
+        <a href="enterprise.html" class="nav-link">Enterprise</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link">Explore <span class="arrow">▼</span></a>
+          <div class="dropdown-megamenu dropdown-explore">
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Teams</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Eng &amp; Product</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Design</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Marketing</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">IT</span></a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Team size</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Startups</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">SMBs</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Enterprise</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Education</span></a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Learn</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Help center</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Customer stories</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Blog</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Community</span></a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-section-title">Build</div>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">API</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Templates</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Security</span></a>
+              <a href="#" class="dropdown-link"><span class="dropdown-link-title">Consultants</span></a>
+            </div>
+          </div>
+        </div>
+        <a href="request-demo.html" class="nav-link">Request a demo</a>
+      </nav>
+      <div class="header-actions">
+        <a href="login.html" class="login-btn">Log in</a>
+        <a href="login.html" class="cta-btn" style="background-color: #1a1a1a;">Get Notion Calendar free </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="calendar-hero" style="padding: 80px 0; text-align: center; position: relative; background: #fff;">
+      <div class="container">
+        <img src="assets/images/notion14.png" alt="Calendar Icon" style="width: 130px; margin-bottom: 20px;">
+      <h3 style="font-size: 16px; font-weight: 500; margin-bottom: 10px;font-weight: 900;margin-top:-15px">Notion Calendar</h3> 
+        <h1 style="font-size: 65px; font-weight: 850; margin-bottom: 20px;margin-top:-1px">It’s time.</h1>
+        <p style="max-width: 600px; margin: 0 auto 30px; font-size: 20px; line-height: 1.6; font-weight: 400;">
+          All of your commitments, now in one place.<br>
+          Meet the beautifully designed,<br>
+          fully integrated calendar for your work and life.
+        </p>
+        <a href="login-calender.html" class="cta-btn cta-dark" style="padding: 12px 24px; background: #1a1a1a; color: #fff; border-radius: 8px; font-size: 16px; text-decoration: none;">Get Notion Calendar free</a>
+        <div style="margin-top: 60px; display: flex; justify-content: center;">
+          <img src="assets/images/emogi1.png" style="position: absolute; top: 30%; left: 10%; z-index: 0;" alt="" />
+          <iframe src="https://player.vimeo.com/video/900932859?h=9d585c918f"
+                  style="width: 90%; max-width: 900px; height: 500px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border: none; z-index: 1; position: relative;"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <section style="padding: 100px 0; text-align: center; background: #fff; position: relative;">
+        <div class="container" style="max-width: 960px; margin: 0 auto;">
+          <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 40px;">Time management, simplified.</h1>
+          <div style="background: #f5f4f3; padding: 40px 30px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); text-align: left;">
+            <h3 style="font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px;">
+              <span style="color: #0056ff; font-size: 24px;">⚡</span> See your schedule at a glance
+            </h3>
+            <p style="font-size: 17px; font-weight: 400; margin-top: 10px;">
+              Join meetings directly from the menu bar so you can stay focused on the work that matters.
+            </p>
+          </div>
+          <div style="margin-top: 60px;">
+            <img src="assets/images/glancecal.png" alt="Schedule Menu Preview"
+                 style="width: 100%; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);">
+          </div>
+        </div>
+      </section>
+
+      <section style="padding: 100px 0; background: #fff;">
+  <div class="container" style="max-width: 1150px; margin: 0 auto;">
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+      <div style="flex: 1; min-width: 280px; max-width: 550px; background: #f5f4f3; padding: 30px; border-radius: 16px; display: flex; gap: 20px; align-items: flex-start;">
+        <div style="flex: 1;">
+          <h3 style="font-size: 16px; color: #0061fe; margin-bottom: 10px;">🕒</h3>
+          <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 10px;">Built-in scheduling</h2>
+          <p style="font-size: 16px; line-height: 1.6;">Send your availability and scheduling link to let others book time with you. No separate app.</p>
+        </div>
+        <img src="assets/images/scheduling-preview.png.png" alt="Scheduling Preview"
+             style="width: 180px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);">
+      </div>
+
+      <div style="flex: 1; min-width: 280px; max-width: 550px; background: #f5f4f3; padding: 30px; border-radius: 16px; display: flex; gap: 20px; align-items: flex-start;">
+        <div style="flex: 1;">
+          <h3 style="font-size: 16px; color: #0061fe; margin-bottom: 10px;">📶</h3>
+          <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 10px;">Work across time zones</h2>
+          <p style="font-size: 16px; line-height: 1.6;">Thoughtfully collaborate with global teams as you visualize your day across time zones.</p>
+        </div>
+        <img src="assets/images/timezone-preview.png" alt="Time Zones Preview"
+             style="width: 180px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);">
+      </div>
+    </div>
+  </div>
+
+
+  <section style="padding: 100px 0; background: #fff;">
+    <div class="container" style="max-width: 1150px; margin: 0 auto;">
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+        
+        <div style="flex: 1; min-width: 280px; max-width: 500px; background: #f5f4f3; padding: 30px; border-radius: 16px;">
+          <h3 style="font-size: 16px; color: #0061fe; margin-bottom: 10px;">⌨️</h3>
+          <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 10px;">Modern design</h2>
+          <p style="font-size: 16px; line-height: 1.6;">Use command menu and shortcuts for efficient workflows.</p>
+          <img src="assets/images/moderndesign.png" alt="Modern Design Screenshot"
+               style="width: 100%; margin-top: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);">
+        </div>
+        
+        <div style="flex: 1; min-width: 280px; max-width: 500px; background: #f5f4f3; padding: 30px; border-radius: 16px;">
+          <h3 style="font-size: 16px; color: #0061fe; margin-bottom: 10px;">🌍</h3>
+          <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 10px;">Available in 12 languages</h2>
+          <p style="font-size: 16px; line-height: 1.6;">
+            Supports English, Japanese, Korean, French, German, Spanish, Portuguese, Danish, Dutch, Finnish, Norwegian, and Swedish...
+            with more on the way!
+          </p>
+          <img src="assets/images/launguagesupport.png" alt="Language Support Graphic"
+               style="width: 100%; margin-top: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);">
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <section style="padding: 100px 0; background: #fff; text-align: center; position: relative;">
+    <div class="container" style="max-width: 960px; margin: 0 auto;">
+      <img src="assets/images/plusemogi.png" alt="Plus Icon" style="position: absolute; top: 40px; left: 100px; width: 60px;">
+      <h1 style="font-size: 50px; font-weight: 800; margin-bottom: 30px;">
+        Fully integrated with<br>your Notion workspace.
+      </h1>
+      <div style="background: #f5f4f3; padding: 40px 30px; border-radius: 16px; text-align: left;">
+        <h3 style="font-size: 18px; font-weight: 700;">🔁 Manage your time and work, together.</h3>
+        <p style="font-size: 16px; font-weight: 400; margin-top: 10px;">
+          See deadlines and project timelines alongside your calendar events so you know where to focus your efforts.
+        </p>
+        <div style="margin-top: 30px;">
+          <img src="assets/images/calendar1.png" alt="Integrated Workspace"
+               style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section style="padding: 100px 0; background: #fff;">
+    <div class="container" style="max-width: 1150px; margin: 0 auto;">
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+  
+        <div style="flex: 1; min-width: 280px; max-width: 500px; background: #f5f4f3; padding: 30px; border-radius: 16px;">
+          <h3 style="font-size: 16px; color: #0061fe; margin-bottom: 10px;">📄</h3>
+          <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 10px;">Connect and create Notion docs</h2>
+          <p style="font-size: 16px; line-height: 1.6;">
+            With info from Notion right in your calendar, you’ll always have full context for every meeting.
+          </p>
+          <img src="assets/images/notion-doc-preview.png" alt="Notion Docs Preview"
+               style="width: 100%; margin-top: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);">
+        </div>
+  
+        <div style="flex: 1; min-width: 280px; max-width: 500px; background: #f5f4f3; padding: 30px; border-radius: 16px;">
+          <h3 style="font-size: 16px; color: #0061fe; margin-bottom: 10px;">🖱️</h3>
+          <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 10px;">Update project timelines</h2>
+          <p style="font-size: 16px; line-height: 1.6;">
+            Just drag and drop to edit Notion database items without leaving your calendar.
+          </p>
+          <img src="assets/images/update-project.png" alt="Update Project Timeline Preview"
+               style="width: 100%; margin-top: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);">
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 100px 0; background: #fff; text-align: center;">
+    <div class="container" style="max-width: 960px; margin: 0 auto;">
+      <img src="assets/images/emogi2.png" alt="Dog Icon" style="width: 70px; margin-bottom: 20px;">
+      <h1 style="font-size: 42px; font-weight: 800; margin-bottom: 40px;">Work and life, playing nice.</h1>
+  
+      <div style="background: #f5f4f3; padding: 40px 30px; border-radius: 16px; text-align: left;">
+        <h3 style="font-size: 18px; font-weight: 700;">📌 See all your commitments in the same place</h3>
+        <p style="font-size: 16px; font-weight: 400; margin-top: 10px;">
+          No more accidental conflicts between work and personal events.
+        </p>
+        <div style="margin-top: 30px;">
+          <img src="assets/images/calender2.png" alt="Work Life Calendar View"
+               style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section style="padding: 80px 0; background: #fff;">
+    <div class="container" style="max-width: 1150px; margin: 0 auto;">
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+        
+        <div style="flex: 1; min-width: 280px; max-width: 360px; background: #f5f4f3; padding: 24px; border-radius: 16px;">
+          <div style="font-size: 22px; color: #0061fe; margin-bottom: 12px;">📶</div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Connect multiple calendars</h3>
+          <p style="font-size: 16px; line-height: 1.5;">Easily sync work and personal calendars.</p>
+        </div>
+  
+        <div style="flex: 1; min-width: 280px; max-width: 360px; background: #f5f4f3; padding: 24px; border-radius: 16px;">
+          <div style="font-size: 22px; color: #0061fe; margin-bottom: 12px;">✋</div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">No more double bookings</h3>
+          <p style="font-size: 16px; line-height: 1.5;">Auto-block busy slots across all your calendars.</p>
+        </div>
+  
+        <div style="flex: 1; min-width: 280px; max-width: 360px; background: #f5f4f3; padding: 24px; border-radius: 16px;">
+          <div style="font-size: 22px; color: #0061fe; margin-bottom: 12px;">📱</div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Easy-to-use mobile app</h3>
+          <p style="font-size: 16px; line-height: 1.5;">View your schedule at a glance and add events quickly with iOS and Android widgets.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <section style="padding: 100px 0; background: #fff;">
+    <div class="container" style="max-width: 1150px; margin: 0 auto; text-align: center;">
+      <h1 style="font-size: 42px; font-weight: 800; margin-bottom: 60px;">
+        Designed to work with<br>your favorite tools.
+      </h1>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: left;">
+        
+        <div style="background: #f5f4f3; padding: 28px 24px; border-radius: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+          <img src="assets/icons/notion.png" alt="Notion" style="width: 30px; margin-bottom: 12px;">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Notion</h3>
+          <p style="font-size: 15px;">Bring in important dates across workspaces into one calendar.</p>
+        </div>
+  
+        <div style="background: #f5f4f3; padding: 28px 24px; border-radius: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+          <img src="assets/icons/google-calendar.png" alt="Google Calendar" style="width: 28px; margin-bottom: 12px;">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Google Calendar</h3>
+          <p style="font-size: 15px;">Connect Google Calendar with your existing Notion workspace.</p>
+        </div>
+  
+        <div style="background: #f5f4f3; padding: 28px 24px; border-radius: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+          <img src="assets/icons/google-calendar.png" alt="Google Meet" style="width: 28px; margin-bottom: 12px;">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Google Meet</h3>
+          <p style="font-size: 15px;">Available by default with Google Calendar.</p>
+        </div>
+  
+        <div style="background: #f5f4f3; padding: 28px 24px; border-radius: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+          <img src="assets/icons/zoom.png" alt="Zoom" style="width: 28px; margin-bottom: 12px;">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Zoom</h3>
+          <p style="font-size: 15px;">Create new Zoom meetings directly in Notion Calendar.</p>
+        </div>
+  
+        <div style="background: #f5f4f3; padding: 28px 24px; border-radius: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+          <img src="assets/icons/calendar.png" alt="Apple Calendar" style="width: 28px; margin-bottom: 12px;">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Apple Calendar</h3>
+          <p style="font-size: 15px;">Create new Apple Calendar meetings directly in Notion.</p>
+        </div>
+  
+        <div style="background: #f5f4f3; padding: 28px 24px; border-radius: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+          <img src="assets/icons/others.png" alt="Other providers" style="width: 28px; margin-bottom: 12px;">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 6px;">Other providers</h3>
+          <p style="font-size: 15px;">Add a custom link from other popular conferencing services.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <section style="padding: 100px 0; background: #fff; text-align: center;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto;">
+      <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 10px;">
+        Get Notion Calendar for free.
+      </h1>
+      <p style="font-size: 18px; color: #444; margin-bottom: 20px;">
+        Unlock a better way to manage your time and life.
+      </p>
+      <a href="#" style="color: #0056ff; font-size: 16px; font-weight: 600; text-decoration: none; display: inline-block; margin-bottom: 60px;">
+        Get Notion Calendar free &rarr;
+      </a>
+  
+      <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+        <!-- Desktop App -->
+        <div style="flex: 1; min-width: 320px; max-width: 500px; background: #f5f4f3; padding: 30px; border-radius: 16px; text-align: left;">
+          <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">Desktop App</h2>
+          <img src="assets/images/desktop.png" alt="Desktop App" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+          <div style="display: flex; gap: 12px;">
+            <a href="#" style="display: flex; align-items: center; gap: 6px; padding: 10px 16px; background: #fff; border-radius: 8px; font-size: 15px; font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+              <img src="assets/icons/apple-logo.png" alt="macOS" style="height: 20px;"> macOS
+            </a>
+            <a href="#" style="display: flex; align-items: center; gap: 6px; padding: 10px 16px; background: #fff; border-radius: 8px; font-size: 15px; font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+              <img src="assets/icons/windows.png" alt="Windows" style="height: 20px;"> Windows
+            </a>
+          </div>
+        </div>
+  
+        <!-- Mobile App -->
+        <div style="flex: 1; min-width: 320px; max-width: 500px; background: #f5f4f3; padding: 30px; border-radius: 16px; text-align: left;">
+          <h2 style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">Mobile App</h2>
+          <img src="assets/images/appleimg1.png" alt="Mobile App" style="width: 50%; border-radius: 12px; margin-bottom: 20px;">
+          <div style="display: flex; gap: 12px;">
+            <a href="#" style="display: flex; align-items: center; gap: 6px; padding: 10px 16px; background: #fff; border-radius: 8px; font-size: 15px; font-weight: 600; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+              <img src="assets/icons/apple-logo.png" alt="Apple App Store" style="height: 20px;"> Apple App Store
+            </a>
+            <a href="#" style="display: flex; align-items: center; gap: 6px; padding: 10px 16px; background: #fff; border-radius: 8px; font-size: 15px; font-weight: 600; box-shadow: 0 2px 6px rgba(0,0,0,0.06);">
+              <img src="assets/icons/google.png" alt="Google Play" style="height: 20px;"> Google Play
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+      <!-- Decorative icons (floating emoji illustrations, updated positioning) -->
+      <img src="assets/images/emogi1.png" style="position: absolute; top: 100px; left: 60px; width: 80px;" alt="" />
+      <img src="assets/images/emogi2.png" style="position: absolute; top: 150px; right: 80px; width: 80px;" alt="" />
+      <img src="assets/images/emogi3.png" style="position: absolute; top: 250px; left: 100px; width: 80px;" alt="" />
+      <img src="assets/images/emogi4.png" style="position: absolute; top: 280px; right: 120px; width: 80px;" alt="" />
+      <img src="assets/images/emogi5.png" style="position: absolute; top: 350px; left: 200px; width: 80px;" alt="" />
+      <img src="assets/images/emogi6.png" style="position: absolute; top: 380px; right: 200px; width: 80px;" alt="" />
+    </section>
+  </main>
+
+  <!-- Shared footer placeholder -->
+  <div id="shared-footer"></div>
+  <script src="script.js"></script>
+  <script>
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(html => { document.getElementById('shared-footer').innerHTML = html; });
+  </script>
+</body>
+</html>

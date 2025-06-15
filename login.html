@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion - Log in</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="notion-body">
+    
+    <div id="notion-app">
+        <div class="notion-app-inner">
+            <div style="display: flex; flex-direction: column; min-height: 100vh;">
+                <div
+                    style="position: fixed; z-index: 99; font-family: inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol'; width: 100%;">
+                    <nav
+                        style="display: flex; align-items: center; justify-content: start; width: 100%; padding-left: 20px; padding-right: 20px; transition: height 250ms; height: 80px; position: relative; overflow: hidden; box-shadow: none;">
+                        <div style="flex-shrink: 0;">
+                            <a href="index.html" rel="noopener noreferrer" aria-label="Notion"
+                                style="display: block; color: inherit; text-decoration: none; user-select: auto; cursor: pointer;">
+                                <div style="display: flex; align-items: center;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
+                                        alt="Notion Logo"
+                                        style="width: 30px; height: 30px; display: block; fill: inherit; flex-shrink: 0; margin-right: 10px;">
+                                </div>
+                            </a>
+                        </div>
+                        <div style="margin-left:16px; position: relative;">
+                            <select id="language-select"
+                                style="padding:6px 28px 6px 12px; border:1px solid rgba(84,72,49,0.15); border-radius:6px; font-size:14px; background:#fff url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'12\' height=\'8\'><path d=\'M1 1l5 5 5-5\' stroke=\'%23666\' stroke-width=\'1.5\' fill=\'none\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>') no-repeat right 8px center; appearance:none; cursor:pointer;">
+                                <option value="en-US">English (US)</option>
+                                <option value="ko">한국어</option>
+                                <option value="ja">日本語</option>
+                                <option value="fr">Français (France)</option>
+                                <option value="de">Deutsch</option>
+                                <option value="es">Español (España)</option>
+                            </select>
+                        </div>
+                    </nav>
+                </div>
+                <div style="width: 100%; height: 80px; flex-shrink: 0; flex-grow: 0;"></div>
+                <main
+                    style="color: rgb(50, 48, 44); fill: currentcolor; line-height: 1.5; font-family: inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol'; background: rgb(255, 254, 252); font-size: 17px; -webkit-font-smoothing: antialiased; min-height: 0px; flex-grow: 1;">
+                    <div style="display: flex; flex-direction: row; width: 100%; height: 100%;">
+                        <section
+                            style="padding-left: 60px; padding-right: 60px; width: 100%; margin: 0px auto; overflow: visible;">
+                            <div style="width: 100%; height: 100%; border-radius: 4px;">
+                                <div style="width: 100%; max-width: 1260px; margin: 0px auto;">
+                                    <div style="display: flex; flex-direction: column; align-items: center;">
+                                        <div
+                                            style="font-size: 50px; margin-top: 10vh; font-weight: 700; margin-bottom: 23px; text-align: center; line-height: 1.1; max-width: 380px;">
+                                            <div
+                                                style="display: flex; flex-direction: column; text-align: left; width: 320px;">
+                                                <h1 id="headline" style="font-weight: 600; font-size: 22px; line-height: 26px; margin: 0px;">Think it. Make it.</h1>
+                                                <h2 id="subheadline" style="font-weight: 600; font-size: 22px; line-height: 26px; margin: 0px; color: rgba(70, 68, 64, 0.45);">Log in to your Notion account</h2>
+                                            </div>
+                                        </div>
+                                        <div class="notion-login"
+                                            style="width: 100%; display: flex; flex-direction: column; align-items: center; max-width: 320px; margin-bottom: 4vh;">
+                                            <div style="display: flex; width: 100%; flex-direction: column;">
+                                                <div>
+                                                    <div style="width: 100%;">
+                                                        <div aria-disabled="false" role="button" tabindex="0"
+                                                            style="user-select: none; transition: background 20ms ease-in; cursor: pointer; position: relative; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; height: 36px; border-radius: 6px; color: rgb(50, 48, 44); fill: rgb(50, 48, 44); background: none; font-size: 14px; line-height: 1; padding-left: 12px; padding-right: 12px; font-weight: 500; border: 1px solid rgba(84, 72, 49, 0.15); width: 100%; box-shadow: none; margin-top: 8px;">
+                                                            <div
+                                                                style="display: flex; text-align: center; justify-content: center; align-items: center;">
+                                                                <img src="https://www.svgrepo.com/show/475656/google-color.svg"
+                                                                    alt="Google"
+                                                                    style="width: 16px; height: 16px; display: block; fill: inherit; flex-shrink: 0; position: absolute; left: 10px;">
+                                                                <div class="tx-uiregular-14-med">Continue with Google
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div role="button" tabindex="0"
+                                                        style="user-select: none; transition: background 20ms ease-in; cursor: pointer; position: relative; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; height: 36px; border-radius: 6px; color: rgb(50, 48, 44); fill: rgb(50, 48, 44); background: rgba(55, 53, 47, 0.06); font-size: 14px; line-height: 1; padding-left: 12px; padding-right: 12px; font-weight: 500; border: 1px solid rgba(84, 72, 49, 0.15); width: 100%; box-shadow: none; margin-top: 8px;">
+                                                        <div
+                                                            style="display: flex; text-align: center; justify-content: center; align-items: center;">
+                                                            <img src="assets/images/apple.png" alt="Apple"
+                                                                style="width: 16px; height: 16px; display: block; fill: inherit; flex-shrink: 0; position: absolute; left: 10px;">
+                                                            <div class="tx-uiregular-14-med">Continue with Apple</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div style="width: 100%;">
+                                                        <div aria-disabled="false" role="button" tabindex="0"
+                                                            style="user-select: none; transition: background 20ms ease-in; cursor: pointer; position: relative; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; height: 36px; border-radius: 6px; color: rgb(50, 48, 44); fill: rgb(50, 48, 44); background: none; font-size: 14px; line-height: 1; padding-left: 12px; padding-right: 12px; font-weight: 500; border: 1px solid rgba(84, 72, 49, 0.15); width: 100%; box-shadow: none; margin-top: 8px;">
+                                                            <div
+                                                                style="display: flex; text-align: center; justify-content: center; align-items: center;">
+                                                                <img src="assets/images/microsoft.png" alt="Microsoft"
+                                                                    style="width: 16px; height: 16px; display: block; fill: inherit; flex-shrink: 0; position: absolute; left: 10px;">
+                                                                <div class="tx-uiregular-14-med">Continue with Microsoft
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div style="width: 100%;">
+                                                        <div aria-disabled="false" role="button" tabindex="0"
+                                                            style="user-select: none; transition: background 20ms ease-in; cursor: pointer; position: relative; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; height: 36px; border-radius: 6px; color: rgb(50, 48, 44); fill: rgb(50, 48, 44); background: none; font-size: 14px; line-height: 1; padding-left: 12px; padding-right: 12px; font-weight: 500; border: 1px solid rgba(84, 72, 49, 0.15); width: 100%; box-shadow: none; margin-top: 8px;">
+                                                            <div
+                                                                style="display: flex; text-align: center; justify-content: center; align-items: center;">
+                                                                <img src="assets/images/passkey.png" alt="Passkey"
+                                                                    style="width: 16px; height: 16px; display: block; fill: inherit; flex-shrink: 0; position: absolute; left: 10px;">
+                                                                <div class="tx-uiregular-14-med">Log in with passkey
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div style="width: 100%;">
+                                                        <div aria-disabled="false" role="button" tabindex="0"
+                                                            style="user-select: none; transition: background 20ms ease-in; cursor: pointer; position: relative; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; height: 36px; border-radius: 6px; color: rgb(50, 48, 44); fill: rgb(50, 48, 44); background: none; font-size: 14px; line-height: 1; padding-left: 12px; padding-right: 12px; font-weight: 500; border: 1px solid rgba(84, 72, 49, 0.15); width: 100%; box-shadow: none; margin-top: 8px;">
+                                                            <div
+                                                                style="display: flex; text-align: center; justify-content: center; align-items: center;">
+                                                                <img src="assets/images/SSO.png" alt="SSO"
+                                                                    style="width: 20px; height: 16px; display: block; fill: inherit; flex-shrink: 0; position: absolute; left: 10px;">
+                                                                <div class="tx-uiregular-14-med">Single sign-on (SSO)
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="width: 100%; margin-top: 16px;">
+                                                    <label for="email"
+                                                        style="font-size: 14px; color: rgba(55, 53, 47, 0.65); margin-bottom: 4px; display: block;">Email</label>
+                                                    <input type="email" id="email" name="email"
+                                                        placeholder="Enter your email address..."
+                                                        style="width: 100%; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; outline: none; box-sizing: border-box;" />
+                                                    <p
+                                                        style="font-size: 12px; color: rgba(55, 53, 47, 0.45); margin-top: 4px;">
+                                                        Use an organization email to easily collaborate with teammates
+                                                    </p>
+                                                    <a href="startpage/notion-bolt/index.html">                                                    <button
+                                                        style="margin-top: 16px; width: 100%; padding: 10px 0; background-color: #2F80ED; color: white; font-size: 14px; font-weight: 500; border: none; border-radius: 6px; cursor: pointer;">Continue</button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p
+                                            style="font-size: 12px; color: rgba(55, 53, 47, 0.45); text-align: center; margin-top: 16px;">
+                                            By continuing, you acknowledge that you understand and agree to the
+                                            <a href="#"
+                                                style="color: rgba(55, 53, 47, 0.45); text-decoration: underline;">Terms
+                                                &amp; Conditions</a>
+                                            and
+                                            <a href="#"
+                                                style="color: rgba(55, 53, 47, 0.45); text-decoration: underline;">Privacy
+                                                Policy</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+<script>
+const translations = {
+  'en-US': {
+    headline: 'Think it. Make it.',
+    subheadline: 'Log in to your Notion account'
+  },
+  ko: {
+    headline: '생각을 현실로.',
+    subheadline: 'Notion 계정에 로그인하세요'
+  },
+  ja: {
+    headline: '考えを形に。',
+    subheadline: 'Notionアカウントにログイン'
+  },
+  fr: {
+    headline: 'Pensez-le. Créez-le.',
+    subheadline: 'Connectez-vous à votre compte Notion'
+  },
+  de: {
+    headline: 'Denk es. Mach es.',
+    subheadline: 'Melden Sie sich bei Ihrem Notion-Konto an'
+  },
+  es: {
+    headline: 'Piénsalo. Hazlo.',
+    subheadline: 'Inicia sesión en tu cuenta de Notion'
+  }
+};
+const selectEl = document.getElementById('language-select');
+function applyLanguage(lang){
+  const t = translations[lang] || translations['en-US'];
+  document.getElementById('headline').textContent = t.headline;
+  document.getElementById('subheadline').textContent = t.subheadline;
+}
+selectEl.addEventListener('change',(e)=>{
+  const lang = e.target.value;
+  localStorage.setItem('notion-lang', lang);
+  applyLanguage(lang);
+});
+window.addEventListener('DOMContentLoaded',()=>{
+  const saved = localStorage.getItem('notion-lang') || 'en-US';
+  selectEl.value = saved;
+  applyLanguage(saved);
+});
+</script>
+  <!-- Shared footer -->
+  <div id="shared-footer"></div>
+  <script>
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(html => { document.getElementById('shared-footer').innerHTML = html; });
+  </script>
+</body>
+
+</html>

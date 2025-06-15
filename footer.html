@@ -1,0 +1,95 @@
+<!-- Shared Footer -->
+<footer class="footer" style="background: #fff; padding: 80px 40px; font-family: sans-serif;">
+  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+
+    <!-- Logo & Socials -->
+    <div style="flex: 1 1 250px; margin-bottom: 40px;">
+      <img src="assets/images/notion-logo.jpeg" alt="Notion Logo" style="height: 40px; margin-bottom: 24px;">
+      <div class="footer-socials" style="display: flex; gap: 12px; margin-bottom: 20px;">
+        <img src="assets/icons/icons8-insta.svg" alt="Instagram" style="width: 20px;" >
+        <img src="assets/icons/icons8-x.svg" alt="X" style="width: 20px;" >
+        <img src="assets/icons/icons8-linkedin.svg" alt="LinkedIn" style="width: 20px;" >
+        <img src="assets/icons/icons8-facebook.svg" alt="Facebook" style="width: 20px;" >
+        <img src="assets/icons/icons8-youtube.svg" alt="YouTube" style="width: 20px;" >
+      </div>
+      <div class="language-dropdown">
+        <button id="language-btn" onclick="toggleLanguageMenu()">
+          🌐 <span id="selected-lang">English (US)</span> <span style="font-size: 14px;">▼</span>
+        </button>
+        <ul id="language-menu" class="language-menu">
+          <li onclick="selectLanguage(this)" data-lang="English (US)">
+            <strong>English (US)</strong><br><span>English (US)</span>
+          </li>
+          <li onclick="selectLanguage(this)" data-lang="Français (France)">
+            <strong>Français (France)</strong><br><span>French (France)</span>
+          </li>
+          <li onclick="selectLanguage(this)" data-lang="Deutsch">
+            <strong>Deutsch</strong><br><span>German</span>
+          </li>
+          <li onclick="selectLanguage(this)" data-lang="日本語">
+            <strong>日本語</strong><br><span>Japanese</span>
+          </li>
+          <li onclick="selectLanguage(this)" data-lang="한국어">
+            <strong>한국어</strong><br><span>Korean</span>
+          </li>
+        </ul>
+      </div>
+      <div style="color: #666; font-size: 14px;">
+        <div>Do Not Sell or Share My Info</div>
+        <div>Cookie settings</div>
+        <div style="margin-top: 12px;">© 2025 Notion Labs, Inc.</div>
+      </div>
+    </div>
+
+    <!-- Link Columns -->
+    <div style="display: flex; flex: 3 1 600px; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+
+      <div>
+        <h4 style="font-weight: 700; margin-bottom: 16px; color: #111;">Company</h4>
+        <ul style="list-style: none; padding: 0; line-height: 2;">
+          <li>About us</li>
+          <li>Careers</li>
+          <li>Security</li>
+          <li>Status</li>
+          <li>Terms & privacy</li>
+          <li>Your privacy rights</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-weight: 700; margin-bottom: 16px;">Download</h4>
+        <ul style="list-style: none; padding: 0; line-height: 2;">
+          <li>iOS & Android</li>
+          <li>Mac & Windows</li>
+          <li>Calendar</li>
+          <li>Web Clipper</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-weight: 700; margin-bottom: 16px;">Resources</h4>
+        <ul style="list-style: none; padding: 0; line-height: 2;">
+          <li>Help center</li>
+          <li>Pricing</li>
+          <li>Blog</li>
+          <li>Community</li>
+          <li>Integrations</li>
+          <li>Templates</li>
+          <li>Affiliates</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="font-weight: 700; margin-bottom: 16px;">Notion for</h4>
+        <ul style="list-style: none; padding: 0; line-height: 2;">
+          <li>Enterprise</li>
+          <li>Small business</li>
+          <li>Personal</li>
+          <li style="margin-top: 16px; font-weight: bold;">Explore more →</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="translation.js"></script>
+<!-- End Shared Footer -->

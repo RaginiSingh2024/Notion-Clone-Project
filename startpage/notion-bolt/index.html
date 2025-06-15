@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Top Section -->
+            <div class="sidebar-top">
+                <div class="workspace-header" onclick="showAccountManagement()">
+                    <div class="workspace-avatar">R</div>
+                    <span class="workspace-name">Ragini Singh's W...</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search" id="searchInput">
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-item" onclick="showHome()">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </div>
+                    <div class="nav-item" onclick="showInbox()">
+                        <i class="fas fa-inbox"></i>
+                        <span>Inbox</span>
+                    </div>
+                </div>
+
+                <!-- Private Section -->
+                <div class="sidebar-section">
+                    <div class="section-header" onclick="toggleSection('private')">
+                        <i class="fas fa-chevron-down section-chevron" id="private-chevron"></i>
+                        <span>Private</span>
+                    </div>
+                    <div class="section-content" id="private-content">
+                        <div id="privatePages"></div>
+                        <div class="add-page-btn" onclick="createNewPage()">
+                            <i class="fas fa-plus"></i>
+                            <span>Add new</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teamspaces Section -->
+                <div class="sidebar-section">
+                    <div class="section-header" onclick="toggleSection('teamspaces')">
+                        <i class="fas fa-chevron-down section-chevron" id="teamspaces-chevron"></i>
+                        <span>Teamspaces</span>
+                    </div>
+                    <div class="section-content" id="teamspaces-content">
+                        <div class="nav-item" onclick="showAccountManagement()">
+                            <span class="emoji">🏢</span>
+                            <span>Ragini Singh's Workspace HQ</span>
+                        </div>
+                        <div class="nav-item" onclick="showAccountManagement()">
+                            <span class="emoji">📊</span>
+                            <span>Account Management</span>
+                        </div>
+                        <div class="add-page-btn" onclick="createNewPage()">
+                            <i class="fas fa-plus"></i>
+                            <span>Add new</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="sidebar-bottom">
+                <div class="nav-item" onclick="showSettings()">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="nav-item" onclick="showTemplates()">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Templates</span>
+                </div>
+                <div class="nav-item" onclick="showTrash()">
+                    <i class="fas fa-trash"></i>
+                    <span>Trash</span>
+                </div>
+                <div class="nav-divider"></div>
+                <div class="nav-item" onclick="showInviteMembers()">
+                    <i class="fas fa-users"></i>
+                    <span>Invite members</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="main-header">
+                <div class="header-left">
+                    <h1 class="page-title" id="headerTitle">Getting Started</h1>
+                    <div class="page-status">
+                        <i class="fas fa-lock"></i>
+                        <span>Private</span>
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <span class="last-edited" id="lastEdited">Edited just now</span>
+                    
+                    <div class="header-actions">
+                        <button class="share-btn" onclick="showShareModal()">
+                            <i class="fas fa-share"></i>
+                            Share
+                        </button>
+                        <button class="action-btn" onclick="showComments()">
+                            <i class="fas fa-comment"></i>
+                        </button>
+                        <button class="action-btn" onclick="toggleFavorite()">
+                            <i class="fas fa-star" id="favoriteIcon"></i>
+                        </button>
+                        <button class="action-btn" onclick="showMoreOptions()">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Editor -->
+            <div class="page-editor" id="pageEditor">
+                <div class="editor-container">
+                    <input 
+                        type="text" 
+                        class="page-title-input" 
+                        placeholder="Untitled"
+                        id="pageTitleInput"
+                        onkeydown="handleTitleKeydown(event)"
+                    >
+                    <textarea 
+                        class="page-content-input" 
+                        placeholder="Start writing..."
+                        id="pageContentInput"
+                        oninput="handleContentChange()"
+                    ></textarea>
+                </div>
+            </div>
+
+            <!-- Settings Page -->
+            <div class="settings-page" id="settingsPage" style="display: none;">
+                <div class="settings-container">
+                    <h1>Settings</h1>
+                    <div class="settings-sections">
+                        <div class="settings-section">
+                            <h3>Account</h3>
+                            <div class="setting-item">
+                                <label>Display Name</label>
+                                <input type="text" id="displayName" value="Ragini Singh" onchange="saveSettings()">
+                            </div>
+                            <div class="setting-item">
+                                <label>Email</label>
+                                <input type="email" id="userEmail" value="raginisingh@example.com" onchange="saveSettings()">
+                            </div>
+                        </div>
+                        
+                        <div class="settings-section">
+                            <h3>Appearance</h3>
+                            <div class="setting-item">
+                                <label>Theme</label>
+                                <select id="themeSelect" onchange="changeTheme()">
+                                    <option value="light">Light</option>
+                                    <option value="dark">Dark</option>
+                                    <option value="auto">Auto</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <label>Font Size</label>
+                                <select id="fontSizeSelect" onchange="changeFontSize()">
+                                    <option value="small">Small</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="large">Large</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="settings-section">
+                            <h3>Notifications</h3>
+                            <div class="setting-item">
+                                <label>
+                                    <input type="checkbox" id="emailNotifications" checked onchange="saveSettings()">
+                                    Email notifications
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <label>
+                                    <input type="checkbox" id="pushNotifications" checked onchange="saveSettings()">
+                                    Push notifications
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Templates Page -->
+            <div class="templates-page" id="templatesPage" style="display: none;">
+                <div class="templates-container">
+                    <h1>Templates</h1>
+                    <div class="templates-grid">
+                        <div class="template-card" onclick="createFromTemplate('meeting-notes')">
+                            <div class="template-icon">📝</div>
+                            <h3>Meeting Notes</h3>
+                            <p>Template for organizing meeting notes and action items</p>
+                        </div>
+                        <div class="template-card" onclick="createFromTemplate('project-plan')">
+                            <div class="template-icon">📋</div>
+                            <h3>Project Plan</h3>
+                            <p>Comprehensive project planning template</p>
+                        </div>
+                        <div class="template-card" onclick="createFromTemplate('daily-journal')">
+                            <div class="template-icon">📖</div>
+                            <h3>Daily Journal</h3>
+                            <p>Template for daily reflection and planning</p>
+                        </div>
+                        <div class="template-card" onclick="createFromTemplate('task-list')">
+                            <div class="template-icon">✅</div>
+                            <h3>Task List</h3>
+                            <p>Simple task management template</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trash Page -->
+            <div class="trash-page" id="trashPage" style="display: none;">
+                <div class="trash-container">
+                    <h1>Trash</h1>
+                    <div class="trash-actions">
+                        <button class="restore-all-btn" onclick="restoreAllPages()">Restore All</button>
+                        <button class="empty-trash-btn" onclick="emptyTrash()">Empty Trash</button>
+                    </div>
+                    <div class="trash-items" id="trashItems">
+                        <!-- Deleted pages will appear here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Invite Members Page -->
+            <div class="invite-page" id="invitePage" style="display: none;">
+                <div class="invite-container">
+                    <h1>Invite Members</h1>
+                    <div class="invite-form">
+                        <div class="invite-input-group">
+                            <input type="email" id="inviteEmail" placeholder="Enter email address">
+                            <select id="inviteRole">
+                                <option value="member">Member</option>
+                                <option value="admin">Admin</option>
+                                <option value="viewer">Viewer</option>
+                            </select>
+                            <button onclick="sendInvite()">Send Invite</button>
+                        </div>
+                        <div class="invite-link">
+                            <h3>Share Link</h3>
+                            <div class="link-container">
+                                <input type="text" id="shareLink" value="https://notion.so/invite/abc123" readonly>
+                                <button onclick="copyInviteLink()">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pending-invites">
+                        <h3>Pending Invites</h3>
+                        <div id="pendingInvitesList">
+                            <!-- Pending invites will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Management Page -->
+            <div class="account-page" id="accountPage" style="display: none;">
+                <div class="account-container">
+                    <h1>Account Management</h1>
+                    <div class="account-sections">
+                        <div class="account-section">
+                            <h3>Profile</h3>
+                            <div class="profile-info">
+                                <div class="profile-avatar">
+                                    <div class="avatar-large">R</div>
+                                    <button onclick="changeAvatar()">Change Avatar</button>
+                                </div>
+                                <div class="profile-details">
+                                    <div class="setting-item">
+                                        <label>Full Name</label>
+                                        <input type="text" id="fullName" value="Ragini Singh">
+                                    </div>
+                                    <div class="setting-item">
+                                        <label>Email</label>
+                                        <input type="email" id="accountEmail" value="raginisingh@example.com">
+                                    </div>
+                                    <div class="setting-item">
+                                        <label>Phone</label>
+                                        <input type="tel" id="phone" value="+1 (555) 123-4567">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="account-section">
+                            <h3>Workspace</h3>
+                            <div class="setting-item">
+                                <label>Workspace Name</label>
+                                <input type="text" id="workspaceName" value="Ragini Singh's Workspace">
+                            </div>
+                            <div class="setting-item">
+                                <label>Workspace URL</label>
+                                <input type="text" id="workspaceUrl" value="raginisworkspace">
+                            </div>
+                        </div>
+
+                        <div class="account-section">
+                            <h3>Security</h3>
+                            <button class="security-btn" onclick="changePassword()">Change Password</button>
+                            <button class="security-btn" onclick="enable2FA()">Enable 2FA</button>
+                            <button class="security-btn danger" onclick="deleteAccount()">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Page -->
+            <div class="home-page" id="homePage" style="display: none;">
+                <div class="home-container">
+                    <h1>Good evening, Ragini!</h1>
+                    <div class="home-sections">
+                        <div class="recent-pages">
+                            <h3>Recent Pages</h3>
+                            <div id="recentPagesList"></div>
+                        </div>
+                        <div class="quick-actions">
+                            <h3>Quick Actions</h3>
+                            <div class="action-buttons">
+                                <button onclick="createNewPage()">
+                                    <i class="fas fa-plus"></i>
+                                    New Page
+                                </button>
+                                <button onclick="showTemplates()">
+                                    <i class="fas fa-file-alt"></i>
+                                    Templates
+                                </button>
+                                <button onclick="showInviteMembers()">
+                                    <i class="fas fa-users"></i>
+                                    Invite Team
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inbox Page -->
+            <div class="inbox-page" id="inboxPage" style="display: none;">
+                <div class="inbox-container">
+                    <h1>Inbox</h1>
+                    <div class="inbox-filters">
+                        <button class="filter-btn active" onclick="filterInbox('all')">All</button>
+                        <button class="filter-btn" onclick="filterInbox('unread')">Unread</button>
+                        <button class="filter-btn" onclick="filterInbox('mentions')">Mentions</button>
+                    </div>
+                    <div class="inbox-items" id="inboxItems">
+                        <div class="inbox-item">
+                            <div class="inbox-icon">💬</div>
+                            <div class="inbox-content">
+                                <h4>New comment on "Project Plan"</h4>
+                                <p>Someone commented on your page</p>
+                                <span class="inbox-time">2 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">📄</div>
+                <h2>Select a page to get started</h2>
+                <p>Choose a page from the sidebar or create a new one to begin editing.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modalTitle">Modal Title</h3>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Modal content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
