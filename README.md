@@ -147,19 +147,29 @@ Add a dark/light mode switch using CSS variables and JavaScript for better acces
 Store notes and pages on cloud databases (e.g., Firebase, Supabase) for cross-device support and data safety.
 
 **🧩 Custom Templates**
+
 Allow users to create and save their own templates for docs, wikis, and kanban boards.
 
+
 **📅 Calendar & Reminders Integration**
+
 Integrate a calendar system with the ability to set tasks, events, and automated reminders.
 
+
 **📝 Markdown Support**
+
 Enable users to write notes in markdown syntax and preview formatted output live.
 
+
 **🧠 AI Summarizer / Assistant**
+
 Add a basic AI assistant to help summarize long notes or suggest tags automatically.
 
+
 **💬 Collaboration Support**
+
 Introduce shared pages or live collaborative editing with WebSocket or Firebase Realtime DB.
+
 
 **📎 File Attachments**
 Let users upload and attach files/images within their pages or notes.
