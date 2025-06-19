@@ -75,6 +75,7 @@ It appears as a small toggle button on the side of the screen, which opens up in
 ## 🌐 Example UI Flow:
 Click 📝 → Sidebar slides in → Type something → It auto-saves using localStorage → Close it anytime.
 
+---
 
 ## 🛠️ Technologies Used
 - **HTML5** –Pages for note categories, embedded videos, and real-time collaboration promo
