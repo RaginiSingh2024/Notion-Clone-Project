@@ -183,7 +183,7 @@ Implement a smarter, fuzzy search to help users find any content across the work
 ## 🔗 Additional Resources
 
 - 🎨 **Figma Prototype For Website:** [View UI Design](https://www.figma.com/proto/zahiyoE4ROINoXP8fxze8g/Notion-Clone-Project?node-id=0-1&t=I82iIErHO1HDpyRh-1)
-- 🎨 **Figma Prototype For App:** [View UI Design](https://www.figma.com/proto/zahiyoE4ROINoXP8fxze8g/Notion-Clone-Project?node-id=13-18&t=I82iIErHO1HDpyRh-1)
+- 🎨 **Figma Prototype For App:** [View UI Design](https://www.figma.com/proto/zahiyoE4ROINoXP8fxze8g/Notion-Clone-Project?node-id=13-18&t=5KKLFh4yABhflEJi-1)
 - 📊 **Business Model Canvas:** [View Document](https://docs.google.com/spreadsheets/d/1jN0wnT8u4Vzsxdn18lJOmF0uYwDTc9JhzG5Pq_0VOLY/edit?usp=sharing)
 - 📘 **Documentation:** [View Document](https://itmgrp-my.sharepoint.com/:w:/g/personal/isubtech_2024_raginis_itmgroup_itm_edu/Eb4bhjE_QiRPmRF9jpCEL0EBtL1NWmF5F3BidAlmNCAmkA?e=o15fiw)
 
